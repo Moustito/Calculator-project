@@ -54,8 +54,17 @@ for (let element of calculator) {
   let concatenate = document
     .getElementById(element)
     .addEventListener("click", (event) => {
-      if (!(element === 'AC')){
-        displayNum(element);
+      switch (element) {
+        case "AC":
+          concatenationReset();
+          break;
+        case "=":
+          concatenationResult();
+          displayNum(element);
+          break;
+        default:
+          displayNum(element);
+          break;
       }
     });
 }
@@ -65,18 +74,20 @@ function displayNum(element) {
   let displayInputInOutput = document.getElementById("previous");
   displayString = displayString + input;
   displayInputInOutput.innerHTML = displayString;
-
 }
 
 // AC
-// document.getElementById('AC').removeEventListener("click", displayNum(element))
-  let concatenateReset = document
-    .getElementById('AC')
-    .addEventListener("click", (event) => {
-      fuckingReset();
-    });
-
-function fuckingReset() {
-  document.getElementById('previous').innerHTML = ''
-  displayString = ''
+function concatenationReset() {
+  document.getElementById("previous").innerHTML = "";
+  document.getElementById("current").innerHTML = "";
+  displayString = "";
+}
+// result
+function concatenationResult() {
+  computeResult(displayString);
+  document.getElementById("current").innerHTML = computeResult(displayString);
+}
+// 
+function computeResult(str) {
+  return Function("return " + str)();
 }

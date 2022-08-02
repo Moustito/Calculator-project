@@ -17,6 +17,7 @@ main #output #previous {
 main #output #current {
   width: 100%;
   height: 50%;
+  text-align: right;
 }
 main .btnStyle {
   margin: 5px;
