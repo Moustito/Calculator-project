@@ -87,7 +87,16 @@ function concatenationResult() {
   computeResult(displayString);
   document.getElementById("current").innerHTML = computeResult(displayString);
 }
-// 
+//
 function computeResult(str) {
   return Function("return " + str)();
 }
+
+//Button enter
+document.addEventListener("keydown", (event) => {
+  if (event.key === 'Enter') {
+    concatenationResult()
+    displayNum(element);
+
+  }
+});
