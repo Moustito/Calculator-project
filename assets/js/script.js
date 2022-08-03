@@ -93,30 +93,68 @@ function computeResult(str) {
   return Function("return " + str)();
 }
 
-
 //Button handle
 document.addEventListener("keyup", (event) => {
-  if (event.key === 'Enter') {
-    concatenationResult();
-    displayNum('=');
-  } 
-  if (event.key === '+') {
-    displayNum('+');
-  }  
-  if (event.key === '%') {
-    displayNum('%');
-  }  
-  if (event.key === '/') {
-    displayNum('/');
-  }  
-  if (event.key === '/') {
-    displayNum('/');
-  }  
-  if (event.key === '*') {
-    displayNum('*');
-  } 
-  if (event.key === '-') {
-    displayNum('-');
-  }  
+  switch (event.key) {
+    //operator
+    case "Enter":
+      concatenationResult();
+      displayNum("=");
+      break;
+    case "+":
+      displayNum("+");
+      break;
+    case "-":
+      displayNum("-");
+      break;
+    case "*":
+      displayNum("*");
+      break;
+    case "/":
+      displayNum("/");
+      break;
+    case "%":
+      displayNum("%");
+      break;
+    case "(":
+      displayNum("(");
+      break;
+    case ")":
+      displayNum(")");
+      break;
+    case ".":
+      displayNum(".");
+      break;
+    //number
+    case "0":
+      displayNum("0");
+      break;
+    case "1":
+      displayNum("1");
+      break;
+    case "2":
+      displayNum("2");
+      break;
+    case "3":
+      displayNum("3");
+      break;
+    case "4":
+      displayNum("4");
+      break;
+    case "5":
+      displayNum("5");
+      break;
+    case "6":
+      displayNum("6");
+      break;
+    case "7":
+      displayNum("7");
+      break;
+    case "8":
+      displayNum("8");
+      break;
+    case "9":
+      displayNum("9");
+      break;
+  }
 });
-
