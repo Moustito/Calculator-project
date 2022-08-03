@@ -74,6 +74,7 @@ function displayNum(element) {
   let displayInputInOutput = document.getElementById("previous");
   displayString = displayString + input;
   displayInputInOutput.innerHTML = displayString;
+  document.activeElement.blur(element);
 }
 
 // AC
@@ -87,7 +88,35 @@ function concatenationResult() {
   computeResult(displayString);
   document.getElementById("current").innerHTML = computeResult(displayString);
 }
-// 
+//
 function computeResult(str) {
   return Function("return " + str)();
 }
+
+
+//Button handle
+document.addEventListener("keyup", (event) => {
+  if (event.key === 'Enter') {
+    concatenationResult();
+    displayNum('=');
+  } 
+  if (event.key === '+') {
+    displayNum('+');
+  }  
+  if (event.key === '%') {
+    displayNum('%');
+  }  
+  if (event.key === '/') {
+    displayNum('/');
+  }  
+  if (event.key === '/') {
+    displayNum('/');
+  }  
+  if (event.key === '*') {
+    displayNum('*');
+  } 
+  if (event.key === '-') {
+    displayNum('-');
+  }  
+});
+
