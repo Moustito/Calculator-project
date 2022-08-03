@@ -74,6 +74,7 @@ function displayNum(element) {
   let displayInputInOutput = document.getElementById("previous");
   displayString = displayString + input;
   displayInputInOutput.innerHTML = displayString;
+  document.activeElement.blur(element);
 }
 
 // AC
@@ -92,11 +93,30 @@ function computeResult(str) {
   return Function("return " + str)();
 }
 
-//Button enter
-document.addEventListener("keydown", (event) => {
-  if (event.key === 'Enter') {
-    concatenationResult()
-    displayNum(element);
 
-  }
+//Button handle
+document.addEventListener("keyup", (event) => {
+  if (event.key === 'Enter') {
+    concatenationResult();
+    displayNum('=');
+  } 
+  if (event.key === '+') {
+    displayNum('+');
+  }  
+  if (event.key === '%') {
+    displayNum('%');
+  }  
+  if (event.key === '/') {
+    displayNum('/');
+  }  
+  if (event.key === '/') {
+    displayNum('/');
+  }  
+  if (event.key === '*') {
+    displayNum('*');
+  } 
+  if (event.key === '-') {
+    displayNum('-');
+  }  
 });
+
