@@ -125,6 +125,9 @@ document.addEventListener("keyup", (event) => {
     case ".":
       displayNum(".");
       break;
+      case "Backspace":
+        concatenationReset();
+        break;
     //number
     case "0":
       displayNum("0");
