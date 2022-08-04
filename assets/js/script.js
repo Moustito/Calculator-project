@@ -1,9 +1,9 @@
 //CALCULATOR
 const calculator = [
+  "AC",
   "(",
   ")",
   "%",
-  "AC",
   "7",
   "8",
   "9",
@@ -93,6 +93,9 @@ function computeResult(str) {
   return Function("return " + str)();
 }
 
+
+
+
 //Button handle
 document.addEventListener("keyup", (event) => {
   switch (event.key) {
@@ -125,9 +128,9 @@ document.addEventListener("keyup", (event) => {
     case ".":
       displayNum(".");
       break;
-      case "Backspace":
-        concatenationReset();
-        break;
+    case "Backspace":
+      concatenationReset();
+      break;
     //number
     case "0":
       displayNum("0");

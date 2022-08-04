@@ -1,14 +1,14 @@
 main {
   width: 400px;
-  color: white;
-  background-color: gray;
+  background-color: #455985;
   padding: 5px;
 }
 main #output {
   margin: 0 auto;
   width: 98%;
   height: 100px;
-  background-color: rgb(0, 208, 255);
+  background-color: #455985;
+  color: white;
   font-size: 40px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
@@ -26,18 +26,41 @@ main .btnStyle {
   margin: 5px;
   width: 90px;
   height: 90px;
-  background-color: white;
+  background-color: #536b9e;
+  color: white;
   border: 0;
+  border-radius: 50%;
   font-size: 40px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 main .btnStyle:active {
-  background-color: rgb(0, 208, 255);
+  background-color: white;
+}
+main .btn0 {
+  color: #b0f2b6;
+}
+main .btn1 {
+  color: #b0f2b6;
+}
+main .btn2 {
+  color: #b0f2b6;
 }
 main .btn3 {
-  background-color: black;
-  color: white;
+  color: rgb(197, 38, 60);
+}
+main .btn7 {
+  color: rgb(197, 38, 60);
+}
+main .btn11 {
+  color: rgb(197, 38, 60);
+}
+main .btn15 {
+  color: rgb(197, 38, 60);
 }
 main .btn18 {
-  background-color: rgb(0, 208, 255);
+  background-color: rgb(197, 38, 60);
+  color: white;
+}
+main .btn19 {
+  color: rgb(197, 38, 60);
 }/*# sourceMappingURL=style.css.map */
